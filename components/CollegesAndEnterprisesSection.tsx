@@ -23,83 +23,117 @@ export default function CollegesAndEnterprisesSection() {
   ];
 
   return (
-    <section className="split-sections-enhanced">
+    <section className="ce-dual-section-exact">
       <style>{`
-        .split-sections-enhanced {
-          padding: 24px 0 46px;
+        .ce-dual-section-exact {
+          padding: 24px 0 48px;
           background: #ffffff;
         }
-        .split-container-enhanced {
-          max-width: 1380px;
+
+        .ce-dual-container-exact {
+          max-width: 1240px;
           width: 100%;
           margin-left: auto;
           margin-right: auto;
-          padding-left: 24px;
-          padding-right: 24px;
+          padding-left: 20px;
+          padding-right: 20px;
         }
-        .split-grid-enhanced {
+
+        .ce-dual-grid-exact {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 28px;
+          gap: 24px;
           align-items: stretch;
         }
-        .split-card-enhanced {
+
+        /* Horizontal Split Card matching Image 2 */
+        .ce-card-exact {
           background: #ffffff;
           border: 1px solid #e2e8f0;
-          border-radius: 18px;
+          border-radius: 16px;
           display: flex;
           flex-direction: row;
           overflow: hidden;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.025);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
-          min-height: 380px;
+          min-height: 330px;
         }
-        .split-card-enhanced:hover {
+
+        .ce-card-exact:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
         }
-        .split-card-text {
-          flex: 1.18;
-          padding: 28px 20px 24px 28px;
+
+        .ce-card-content-exact {
+          flex: 1.25;
+          min-width: 0;
+          padding: 24px 18px 20px 24px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           z-index: 2;
         }
-        .split-card-text h3 {
-          font-size: 21px;
+
+        .ce-badge-exact {
+          display: inline-block;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          padding: 4px 11px;
+          border-radius: 9999px;
+          margin-bottom: 10px;
+          width: fit-content;
+        }
+
+        .ce-badge-green {
+          background-color: #dcfce7;
+          color: #15803d;
+        }
+
+        .ce-badge-purple {
+          background-color: #ede9fe;
+          color: #6d28d9;
+        }
+
+        .ce-card-title-exact {
+          font-size: 19px;
           font-weight: 800;
           color: #0f172a;
-          letter-spacing: -0.015em;
           line-height: 1.25;
-          margin-top: 12px;
-          margin-bottom: 8px;
+          letter-spacing: -0.015em;
+          margin: 0 0 8px 0;
         }
-        .split-card-sub-enhanced {
-          font-size: 13px;
+
+        .ce-card-desc-exact {
+          font-size: 12.5px;
           line-height: 1.5;
           color: #475569;
-          margin-bottom: 16px;
+          margin: 0 0 16px 0;
         }
-        .split-checklist-grid-enhanced {
+
+        .ce-checklist-grid-exact {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 8px 12px;
+          gap: 8px 10px;
           margin-bottom: 18px;
         }
-        .check-item-enhanced {
+
+        .ce-check-item-exact {
           display: flex;
           align-items: center;
           gap: 6px;
-          font-size: 12px;
-          font-weight: 500;
+          font-size: 11.5px;
+          font-weight: 600;
           color: #1e293b;
           line-height: 1.3;
         }
-        .check-item-enhanced svg {
+
+        .ce-check-item-exact svg {
           flex-shrink: 0;
         }
-        .split-link-enhanced {
+
+        .ce-link-exact {
           font-size: 13.5px;
           font-weight: 700;
           display: inline-flex;
@@ -108,90 +142,81 @@ export default function CollegesAndEnterprisesSection() {
           text-decoration: none;
           transition: gap 0.2s ease;
           margin-top: auto;
+          width: fit-content;
           padding-top: 4px;
         }
-        .split-link-enhanced:hover {
+
+        .ce-link-exact:hover {
           gap: 9px;
         }
-        .split-card-media {
-          flex: 0.82;
+
+        .ce-card-media-exact {
+          flex: 0.95;
+          min-width: 0;
           position: relative;
-          min-height: 100%;
           overflow: hidden;
           display: flex;
+          background: #f8fafc;
         }
-        .split-card-media img {
+
+        .ce-card-media-exact img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: top center;
+          object-position: center;
           display: block;
         }
-        .split-card-media-fade {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          width: 48px;
-          background: linear-gradient(to right, #ffffff, transparent);
-          z-index: 1;
-          pointer-events: none;
-        }
-        @media (max-width: 1100px) {
-          .split-grid-enhanced {
+
+        @media (max-width: 1024px) {
+          .ce-dual-grid-exact {
             grid-template-columns: 1fr;
-            gap: 28px;
+            gap: 24px;
           }
         }
-        @media (max-width: 680px) {
-          .split-card-enhanced {
+
+        @media (max-width: 640px) {
+          .ce-card-exact {
             flex-direction: column;
           }
-          .split-card-media {
-            height: 240px;
-            min-height: 240px;
+          .ce-card-media-exact {
+            height: 220px;
+            min-height: 220px;
           }
-          .split-card-media-fade {
-            width: 100%;
-            height: 36px;
-            background: linear-gradient(to bottom, #ffffff, transparent);
-          }
-          .split-card-text {
-            padding: 24px 20px;
+          .ce-checklist-grid-exact {
+            grid-template-columns: 1fr;
           }
         }
       `}</style>
 
-      <div className="split-container-enhanced">
-        <div className="split-grid-enhanced">
+      <div className="ce-dual-container-exact">
+        <div className="ce-dual-grid-exact">
           {/* Card 1: FOR COLLEGES */}
-          <div className="split-card-enhanced">
-            <div className="split-card-text">
+          <div className="ce-card-exact">
+            <div className="ce-card-content-exact">
               <div>
-                <span className="badge-pill badge-green">FOR COLLEGES</span>
-                <h3>Prepare Students for an AI-Driven Workplace</h3>
-                <p className="split-card-sub-enhanced">
+                <span className="ce-badge-exact ce-badge-green">FOR COLLEGES</span>
+                <h3 className="ce-card-title-exact">Prepare Students for an AI-Driven Workplace</h3>
+                <p className="ce-card-desc-exact">
                   Partner with Advaitecs to supplement academic learning with practical, industry-focused technology programs.
                 </p>
 
-                <div className="split-checklist-grid-enhanced">
+                <div className="ce-checklist-grid-exact">
                   {collegePoints.map((pt, idx) => (
-                    <div key={idx} className="check-item-enhanced">
-                      <CheckCircle2 size={15} color="#16a34a" />
+                    <div key={idx} className="ce-check-item-exact">
+                      <CheckCircle2 size={14} color="#16a34a" strokeWidth={2.2} />
                       <span>{pt}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <Link href="/for-colleges" className="split-link-enhanced" style={{ color: '#16a34a' }}>
+              <Link href="/collegesEnterprises#colleges" className="ce-link-exact" style={{ color: '#15803d' }}>
                 <span>Partner With Us</span>
                 <ArrowRight size={15} />
               </Link>
             </div>
 
-            <div className="split-card-media">
-              <div className="split-card-media-fade" />
+            <div className="ce-card-media-exact">
               <Image
                 src="/images/college/college-students.png"
                 alt="College students learning and collaborating"
@@ -202,40 +227,39 @@ export default function CollegesAndEnterprisesSection() {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  objectPosition: 'top center',
+                  objectPosition: 'center',
                 }}
               />
             </div>
           </div>
 
           {/* Card 2: FOR ENTERPRISES */}
-          <div className="split-card-enhanced">
-            <div className="split-card-text">
+          <div className="ce-card-exact">
+            <div className="ce-card-content-exact">
               <div>
-                <span className="badge-pill badge-purple">FOR ENTERPRISES</span>
-                <h3>Transform Your Workforce with AI</h3>
-                <p className="split-card-sub-enhanced">
+                <span className="ce-badge-exact ce-badge-purple">FOR ENTERPRISES</span>
+                <h3 className="ce-card-title-exact">Transform Your Workforce with AI</h3>
+                <p className="ce-card-desc-exact">
                   Practical, role-based workshops that help teams use AI and emerging technologies to improve productivity and innovate.
                 </p>
 
-                <div className="split-checklist-grid-enhanced">
+                <div className="ce-checklist-grid-exact">
                   {enterprisePoints.map((pt, idx) => (
-                    <div key={idx} className="check-item-enhanced">
-                      <CheckCircle2 size={15} color="#0062d2" />
+                    <div key={idx} className="ce-check-item-exact">
+                      <CheckCircle2 size={14} color="#0062d2" strokeWidth={2.2} />
                       <span>{pt}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <Link href="/for-enterprises" className="split-link-enhanced" style={{ color: '#0062d2' }}>
+              <Link href="/collegesEnterprises#enterprises" className="ce-link-exact" style={{ color: '#0062d2' }}>
                 <span>Schedule an Enterprise Workshop</span>
                 <ArrowRight size={15} />
               </Link>
             </div>
 
-            <div className="split-card-media">
-              <div className="split-card-media-fade" />
+            <div className="ce-card-media-exact">
               <Image
                 src="/images/enterprise/enterprise-team.png"
                 alt="Corporate enterprise team collaborating on AI transformation"
@@ -246,7 +270,7 @@ export default function CollegesAndEnterprisesSection() {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  objectPosition: 'top center',
+                  objectPosition: 'center',
                 }}
               />
             </div>
