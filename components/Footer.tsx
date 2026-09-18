@@ -181,7 +181,7 @@ export default function Footer() {
           transform: translateY(-2px);
         }
 
-        /* Column Headers & Lists */
+        /* Column Headers and Lists */
         .footer-col-title {
           font-size: 15px;
           font-weight: 700;
