@@ -107,11 +107,11 @@ export default function Header() {
         {/* Right CTA */}
         <div className="header-right">
           <div className="header-divider"></div>
-          <a href="tel:+917358435345" className="phone-cta">
+          <a href="tel:+919603992299" className="phone-cta">
             <div className="phone-icon-circle">
               <Phone size={17} />
             </div>
-            <span className="phone-number-text">+91 73584 35345</span>
+            <span className="phone-number-text">+91 96039 92299</span>
           </a>
         </div>
 

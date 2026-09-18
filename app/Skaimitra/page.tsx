@@ -1711,13 +1711,13 @@ export default function SkaiMitraPage() {
             </div>
 
             <div className="prefooter-contact-info">
-              <a href="tel:+917358435345" className="prefooter-contact-item">
+              <a href="tel:+919603992299" className="prefooter-contact-item">
                 <Phone size={15} />
-                <span>+91 73584 35345</span>
+                <span>+91 96039 92299</span>
               </a>
-              <a href="mailto:info@advaitecs.com" className="prefooter-contact-item">
+              <a href="mailto:support@advaitecs.com" className="prefooter-contact-item">
                 <Mail size={15} />
-                <span>info@advaitecs.com</span>
+                <span>support@advaitecs.com</span>
               </a>
             </div>
           </div>
