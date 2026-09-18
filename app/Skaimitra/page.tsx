@@ -3,8 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import {
   Cpu,
   BookOpen,
@@ -35,8 +33,6 @@ import {
 export default function SkaiMitraPage() {
   return (
     <div className="skai-page-wrapper">
-      <Header />
-
       <main className="skai-main-content">
         {/* =========================================================================
             SECTION 1: HERO SECTION
@@ -228,7 +224,11 @@ export default function SkaiMitraPage() {
                 <div className="skai-card-content">
                   <div className="skai-card-title-row">
                     <div className="skai-card-badge-circle">
-                      <Cpu size={18} className="skai-card-badge-icon" />
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0047ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M9.5 2a2.5 2.5 0 0 1 2.5 2.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.54" />
+                        <path d="M14.5 2a2.5 2.5 0 0 0-2.5 2.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.54" />
+                        <path d="M8 8h2M14 8h2M8 12h2M14 12h2M8 16h2M14 16h2" />
+                      </svg>
                     </div>
                     <h3 className="skai-card-title">Artificial Intelligence</h3>
                   </div>
@@ -260,7 +260,11 @@ export default function SkaiMitraPage() {
                 <div className="skai-card-content">
                   <div className="skai-card-title-row">
                     <div className="skai-card-badge-circle">
-                      <Code2 size={18} className="skai-card-badge-icon" />
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0047ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="7 8 3 12 7 16" />
+                        <polyline points="17 8 21 12 17 16" />
+                        <line x1="14" y1="4" x2="10" y2="20" />
+                      </svg>
                     </div>
                     <h3 className="skai-card-title">
                       Coding &amp; Computational Thinking
@@ -294,7 +298,15 @@ export default function SkaiMitraPage() {
                 <div className="skai-card-content">
                   <div className="skai-card-title-row">
                     <div className="skai-card-badge-circle">
-                      <Bot size={18} className="skai-card-badge-icon" />
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0047ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 2v4" />
+                        <circle cx="12" cy="2" r="1.5" fill="#0047ff" />
+                        <rect x="4" y="6" width="16" height="14" rx="3" />
+                        <circle cx="9" cy="11" r="1.5" fill="#0047ff" />
+                        <circle cx="15" cy="11" r="1.5" fill="#0047ff" />
+                        <path d="M8 16h8" />
+                        <path d="M2 13h2M20 13h2" />
+                      </svg>
                     </div>
                     <h3 className="skai-card-title">Hands-On Projects</h3>
                   </div>
@@ -326,7 +338,9 @@ export default function SkaiMitraPage() {
                 <div className="skai-card-content">
                   <div className="skai-card-title-row">
                     <div className="skai-card-badge-circle">
-                      <Users size={18} className="skai-card-badge-icon" />
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="#0047ff" stroke="none">
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                      </svg>
                     </div>
                     <h3 className="skai-card-title">Teacher Enablement</h3>
                   </div>
@@ -687,8 +701,6 @@ export default function SkaiMitraPage() {
         </section>
       </main>
 
-      <Footer />
-
       {/* =========================================================================
           STYLES (Strictly scoped, zero hydration mismatch issues)
       ========================================================================== */}
@@ -966,25 +978,30 @@ export default function SkaiMitraPage() {
           padding-bottom: 32px;
         }
 
+        .skai-skill-section .skai-section-title {
+          color: #0047ff;
+        }
+
         .skai-course-card {
           background: #ffffff;
-          border: 1px solid #dbeafe;
+          border: 1.5px solid #dbeafe;
           border-radius: 12px;
           overflow: hidden;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          box-shadow: 0 2px 10px rgba(0, 71, 255, 0.04);
+          transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
         .skai-course-card:hover {
           transform: translateY(-3px);
-          box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
+          border-color: #93c5fd;
+          box-shadow: 0 8px 20px rgba(0, 71, 255, 0.08);
         }
 
         .skai-card-img-box {
           width: 100%;
-          height: 145px;
+          height: 155px;
           overflow: hidden;
           background-color: #f8fafc;
         }
@@ -997,7 +1014,7 @@ export default function SkaiMitraPage() {
         }
 
         .skai-card-content {
-          padding: 14px 14px 16px;
+          padding: 16px 16px 18px;
           display: flex;
           flex-direction: column;
           flex: 1;
@@ -1006,30 +1023,28 @@ export default function SkaiMitraPage() {
         .skai-card-title-row {
           display: flex;
           align-items: center;
-          gap: 8px;
-          margin-bottom: 12px;
+          gap: 12px;
+          margin-bottom: 14px;
+          min-height: 46px;
         }
 
         .skai-card-badge-circle {
-          width: 32px;
-          height: 32px;
+          width: 44px;
+          height: 44px;
           border-radius: 50%;
           background: #ffffff;
-          border: 1.5px solid #2563eb;
+          border: 2px solid #0047ff;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
-        }
-
-        .skai-card-badge-icon {
-          color: #2563eb;
+          box-shadow: 0 2px 8px rgba(0, 71, 255, 0.1);
         }
 
         .skai-card-title {
-          font-size: 14.5px;
+          font-size: 15px;
           font-weight: 800;
-          color: #1e3a8a;
+          color: #0047ff;
           line-height: 1.25;
           margin: 0;
         }
@@ -1037,30 +1052,31 @@ export default function SkaiMitraPage() {
         .skai-card-bullets {
           list-style: none;
           padding: 0;
-          margin: 0 0 14px;
+          margin: 0 0 16px;
           display: flex;
           flex-direction: column;
-          gap: 5px;
+          gap: 6px;
           flex: 1;
         }
 
         .skai-card-bullets li {
           position: relative;
-          padding-left: 14px;
-          font-size: 12px;
-          line-height: 1.35;
+          padding-left: 16px;
+          font-size: 12.5px;
+          line-height: 1.4;
           color: #334155;
+          font-weight: 500;
         }
 
         .skai-card-bullets li::before {
           content: '';
           position: absolute;
           left: 0;
-          top: 6px;
-          width: 5px;
-          height: 5px;
+          top: 7px;
+          width: 5.5px;
+          height: 5.5px;
           border-radius: 50%;
-          background-color: #2563eb;
+          background-color: #0047ff;
         }
 
         .skai-card-action {
@@ -1072,21 +1088,22 @@ export default function SkaiMitraPage() {
         .skai-card-btn {
           display: inline-flex;
           align-items: center;
-          gap: 5px;
-          padding: 4px 12px;
-          font-size: 12px;
+          gap: 6px;
+          padding: 5px 16px;
+          font-size: 12.5px;
           font-weight: 600;
-          color: #2563eb;
-          background: transparent;
-          border: 1.5px solid #2563eb;
+          color: #0047ff;
+          background: #ffffff;
+          border: 1.5px solid #0047ff;
           border-radius: 6px;
           text-decoration: none;
           transition: all 0.2s ease;
         }
 
         .skai-card-btn:hover {
-          background-color: #2563eb;
-          color: #ffffff;
+          background-color: #eff6ff;
+          border-color: #0038e2;
+          color: #0038e2;
         }
 
         /* =========================================================================
